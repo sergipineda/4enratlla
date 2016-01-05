@@ -8,6 +8,7 @@
  */
 class Env
 {
+    public $bd;
 
 
     /**
@@ -15,7 +16,6 @@ class Env
      */
     public function __construct()
     {
-
-
+        $this->bd = new BD();
     }
 }
