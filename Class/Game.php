@@ -8,5 +8,13 @@
  */
 class Game
 {
+    private $env;
 
+    /**
+     * Game constructor.
+     */
+    public function __construct(Env $env)
+    {
+        $this->env = $env;
+    }
 }

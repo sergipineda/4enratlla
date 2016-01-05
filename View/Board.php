@@ -20,7 +20,7 @@ $dim = 4;
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 
-<form>
+<form action="/Controller/BoardController.php">
     <table border="1">
 
         <?php
@@ -29,8 +29,8 @@ $dim = 4;
             <tr></tr>
             <?php for ($j = 1; $j <= $dim; $j++) {
                 ?>
-                <td><input type="submit" value="<?php echo "$i, $j" ?>" id="<?php echo "$i, $j" ?>"
-                           name="<?php echo "$i, $j" ?>"></td>
+                <td><input type="submit" value="<?php echo "$i, $j" ?>" id="<?php echo "$i, $j" ?> "
+                           name="<?php echo "$i, $j" ?>" formmethod="post"></td>
 
             <?php }
         }

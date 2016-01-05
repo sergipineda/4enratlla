@@ -10,6 +10,17 @@ class User
 {
     private $name;
     private $pass;
+    private $env;
+
+    /**
+     * User constructor.
+     * @param $env
+     */
+    public function __construct(Env $env)
+    {
+        $this->env = $env;
+    }
+
 
 }
 
