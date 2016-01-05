@@ -1,20 +1,33 @@
 <?php
 
+include('Class');
 class Index
 {
-    private static $env;
-    private static $user;
-    private static $game;
+    private $env;
+    private $user;
+    private $game;
 
 
-    public static function Init()
+    public function Init()
     {
-        self::$env = new Env();
+        $this->env = new Env();
+        if ($this->CheckToken()) {
 
+            if ($this->InGame()) {
+                //TODO: redirect partida
+
+            } else {
+                //TODO: redirect dashborad
+
+            }
+        } else {
+            //TODO: redirec login
+
+        }
     }
 
 
-    public static function CheckToken()
+    public function CheckToken()
     {
 
 //        TODO: si te toquen i es valid retornem true;
@@ -24,7 +37,7 @@ class Index
     }
 
 
-    public static function InGame()
+    public function InGame()
     {
         //TODO: si està en partida retornem true
 
@@ -35,16 +48,8 @@ class Index
 }
 
 
-Index::Init();
-if (Index::CheckToken()) {
-    if (Index::InGame()) {
-        //TODO: redirect partida
-
-    } else {
-        //TODO: redirect dashborad
-
-    }
-}
+$index = new Index();
+$index->Init();
 
 
 

@@ -4,17 +4,9 @@
  * Created by PhpStorm.
  * User: Mark Domkan
  * Date: 5/1/2016
- * Time: 17:55
+ * Time: 19:10
  */
 class Env
 {
-
-
-
-
-
-
-
-
 
 }
