@@ -1,6 +1,5 @@
-<?php
+<?php namespace joc;
 
-include('Class');
 class Index
 {
     private $env;

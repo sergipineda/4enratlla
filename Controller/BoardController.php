@@ -1,4 +1,4 @@
-<?php
+<?php namespace joc;
 /**
  * Created by PhpStorm.
  * User: spine
