@@ -1,4 +1,6 @@
-<?php namespace joc;
+<?php
+
+include('Class/Env.php');
 
 class Index
 {
