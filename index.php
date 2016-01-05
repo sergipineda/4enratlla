@@ -4,15 +4,27 @@ include('Class/Env.php');
 
 class Index
 {
+    /**
+     * @var Env Environment class
+     */
     private $env;
+    /**
+     * @var User User class
+     */
     private $user;
+    /**
+     * @var Game Game class
+     */
     private $game;
 
 
+    /**
+     * Principal method of the App
+     */
     public function Init()
     {
         $this->env = new Env();
-        if ($this->CheckToken()) {
+        if ($this->CheckLogin()) {
 
             if ($this->InGame()) {
                 //TODO: redirect partida
@@ -22,27 +34,33 @@ class Index
 
             }
         } else {
-            //TODO: redirec login
+
 
         }
     }
 
 
-    public function CheckToken()
+    /**
+     * @return bool return true if user is logged.
+     */
+    public function CheckLogin()
     {
-
-//        TODO: si te toquen i es valid retornem true;
-
-
-        return true;
+        if (isset($_SESSION['login']) && $_SESSION['login'] = !"") {
+            return true;
+        }
+        return false;
     }
 
 
+    /**
+     * @return bool return true if the user is in agame
+     */
     public function InGame()
     {
-        //TODO: si està en partida retornem true
-
-        return true;
+        if (isset($_SESSION['game']) && $_SESSION['game'] = !"") {
+            return true;
+        }
+        return false;
     }
 
 

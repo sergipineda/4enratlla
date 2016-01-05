@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Created by PhpStorm.
@@ -9,4 +9,10 @@
 class DashboardController
 {
 
+
+    public function redirect()
+    {
+        
+    }
+    
 }

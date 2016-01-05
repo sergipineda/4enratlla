@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Created by PhpStorm.
@@ -9,4 +9,13 @@
 class Env
 {
 
+
+    /**
+     * Env constructor.
+     */
+    public function __construct()
+    {
+
+
+    }
 }
